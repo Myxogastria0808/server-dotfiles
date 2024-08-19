@@ -8,6 +8,7 @@ autoload -Uz compinit
 compinit
 
 #start msg
+DISTRO=`sed -n -e /^NAME=/p /etc/os-release | cut -c 6-`
 EXCLAMATION="!!!"
 cowsay "Welcome to " ''$DISTRO''$EXCLAMATION | lolcat
 
